@@ -36,5 +36,9 @@ public class Curso extends Producto{
     public ArrayList<ProductoCliente> getProductosCliente() {
         return productosCliente;
     }
-    
+
+    public float getValor() {
+        return valor;
+    }
+   
 }

@@ -5,6 +5,7 @@
 package core.courses;
 
 import core.persons.Cliente;
+import java.time.LocalDate;
 
 /**
  *
@@ -15,7 +16,16 @@ public class ProductoCliente extends Producto{
     private int nivelAvance;
     private Cliente cliente;
     private Curso curso;
-
+    
+    public ProductoCliente(Curso curso, float valor, LocalDate fechaInicio, Cliente cliente){
+        super(curso.getId(), curso.getNombre(), fechaInicio, valor);
+        this.curso= curso;
+        this.cliente=cliente;
+        this.estadoAprobado=false;
+        this.nivelAvance=0;
+        cliente.addProducto(this);
+    }
+    
     public boolean isEstadoAprobado() {
         return estadoAprobado;
     }
