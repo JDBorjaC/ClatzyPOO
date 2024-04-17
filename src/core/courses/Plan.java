@@ -14,6 +14,10 @@ public class Plan extends Producto{
         this.planes = new ArrayList<>();
     }
     
+    public boolean addPlan(PlanCliente plan){
+        this.planes.add(plan);
+        return true;
+    }
     
     public float getValorMaximoCurso() {
         return valorMaximoCurso;
