@@ -5,6 +5,7 @@
 package core.courses;
 
 import core.persons.Cliente;
+import java.time.LocalDate;
 
 /**
  *
@@ -13,6 +14,16 @@ import core.persons.Cliente;
 public class PlanCliente extends Producto{
     private Cliente cliente;
     private Plan plan;
+
+    public PlanCliente(Cliente cliente, Plan plan, LocalDate fechaFin) {
+        super(plan.getId(), plan.getNombre(), plan.getFechaInicio(), plan.getValor());
+        this.cliente = cliente;
+        this.plan = plan;
+        this.setFechaFin(fechaFin);
+        this.setEstadoActivo(true);
+    }
+    
+    
 
     public Cliente getCliente() {
         return cliente;

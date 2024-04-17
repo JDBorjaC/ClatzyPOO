@@ -4,10 +4,47 @@
  */
 package core.persons;
 
+import core.courses.Plan;
+import core.courses.PlanCliente;
+import core.courses.ProductoCliente;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 /**
  *
  * @author Fla_Borja_Cantillo
  */
-public class Cliente {
+public class Cliente extends Persona{
+    private ArrayList<PlanCliente> planes;
+    private ArrayList<ProductoCliente> productos;
+
+    public Cliente(String nombre, String cedula, String telefono, String email) {
+        super(nombre, cedula, telefono, email);
+        this.planes = new ArrayList<>();
+        this.productos = new ArrayList<>();
+    }
+    public boolean addPlan(Plan plan, LocalDate date){
+        this.planes.add(new PlanCliente(this, plan, date));
+        return true;
+    }
+    public boolean hasAnActivePlan(){
+        for(PlanCliente plan: this.planes){
+            if(plan.isEstadoActivo())
+                return true;
+        }
+        return false;
+    }
+    
+    public PlanCliente getPlan(int index){
+        return this.planes.get(index);
+    }
+    
+    public ArrayList<PlanCliente> getPlanes() {
+        return planes;
+    }
+
+    public ArrayList<ProductoCliente> getProductos() {
+        return productos;
+    }
     
 }

@@ -14,6 +14,13 @@ public abstract class Persona {
     protected String telefono;
     protected String email;
 
+    public Persona(String nombre, String cedula, String telefono, String email) {
+        this.nombre = nombre;
+        this.cedula = cedula;
+        this.telefono = telefono;
+        this.email = email;
+    }
+
     public String getNombre() {
         return nombre;
     }

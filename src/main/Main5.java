@@ -4,6 +4,9 @@
  */
 package main;
 
+import core.clatzy.Clatzy;
+import java.time.LocalDate;
+
 public class Main5 {
     
     public static void main(String[] args) {
@@ -77,7 +80,7 @@ public class Main5 {
         System.out.println("----------------------------------------\n");
 
         System.out.println("------------- BONIFICACION -------------");
-        clatzy.listAll();
+        //clatzy.listAll();
     }
     
 }
