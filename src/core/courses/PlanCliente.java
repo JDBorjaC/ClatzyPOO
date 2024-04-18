@@ -20,8 +20,8 @@ public class PlanCliente extends Producto{
         this.cliente = cliente;
         this.plan = plan;
         plan.addPlan(this);
-        this.setFechaFin(fechaFin);
-        this.setEstadoActivo(true);
+        this.fechaFin = fechaFin;
+        this.estadoActivo = true;
     }
     
     

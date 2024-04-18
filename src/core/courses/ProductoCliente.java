@@ -21,7 +21,7 @@ public class ProductoCliente extends Producto{
         super(curso.getId(), curso.getNombre(), fechaInicio, valor);
         this.curso= curso;
         this.cliente=cliente;
-        this.estadoAprobado=false;
+        this.estadoAprobado=true;
         this.nivelAvance=0;
         cliente.addProducto(this);
     }

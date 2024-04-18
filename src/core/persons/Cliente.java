@@ -26,6 +26,14 @@ public class Cliente extends Persona {
         this.planes = new ArrayList<>();
         this.productos = new ArrayList<>();
     }
+    
+    public boolean alreadyBought(Curso curso){
+        for(ProductoCliente producto: this.productos){
+            if(producto.getNombre().equals(curso.getNombre()))
+                return true;
+        }
+        return false;
+    }
 
     public boolean addPlan(Plan plan, LocalDate date) {
         this.planes.add(new PlanCliente(this, plan, date));
